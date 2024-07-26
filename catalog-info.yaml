@@ -1,0 +1,23 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-ilab15 
+  description: Secure Supply Chain Example for Instructlab Application example   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:
+    # ArgoCD apps from this template used rhtap-gitops as the grouping
+    argocd/app-selector: rhtap/gitops=test-ilab15  
+    janus-idp.io/tekton: test-ilab15 
+    backstage.io/kubernetes-id: test-ilab15 
+    backstage.io/techdocs-ref: dir:. 
+    quay.io/repository-slug: tpetkos/test-ilab15
+  tags: ["ai", "ilab", "python", "experimental"] 
+spec:
+  type: service
+  owner: user:guest 
+  lifecycle: experimental
+ 
